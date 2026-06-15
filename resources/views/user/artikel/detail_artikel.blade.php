@@ -120,7 +120,7 @@
             </div>
         </div>
 
-        {{-- SIDEBAR KANAN (DIATUR STICKY SEMPURNA) --}}
+        {{-- SIDEBAR KANAN --}}
         <div class="lg:col-span-1 self-start w-full">
             <div class="bg-[#18092F] border border-[#8B5CF6]/30 rounded-2xl p-8 space-y-6">
                 <h2  class="text-3xl font-bold tracking-wide text-white"  style="font-family:'Cormorant Garamond', serif;">Artikel Terbaru</h2>

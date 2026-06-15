@@ -20,11 +20,9 @@
     .custom-shadow {
         box-shadow: 0px 10px 40px 0px rgba(124, 58, 237, 0.30);
     }
-    /* Aturan Figma Drop Shadow Hover: X=0 Y=10 Blur=40 Spread=0 Color=7C3AED (30%) */
     .hover-recommend-shadow:hover {
         box-shadow: 0px 10px 40px 0px rgba(124, 58, 237, 0.30);
     }
-    /* Kustomisasi Scrollbar untuk area Daftar Bab dan Komentar */
     .scroll-container::-webkit-scrollbar {
         width: 6px;
     }

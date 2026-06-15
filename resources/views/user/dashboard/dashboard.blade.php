@@ -36,7 +36,6 @@
                     Kisah-kisah favorit para pembaca Lembar Novel
                 </p>
             </div>
-            {{-- Tombol "Lihat Semua" telah dihapus dari sini --}}
         </div>
 
         <div class="novel-grid">

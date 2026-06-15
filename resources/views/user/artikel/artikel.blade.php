@@ -18,7 +18,7 @@
         </div>
     </header>
 
-    {{-- SEARCH BAR (SEKARANG DI BAWAH GAMBAR HERO) --}}
+    {{-- SEARCH BAR --}}
     <div class="search-section-wrapper">
         <div class="search-container">
             <input type="text" id="articleSearch" placeholder="Cari judul artikel di sini...">
@@ -36,7 +36,6 @@
         {{-- GRID UTAMA ARTIKEL --}}
         <div class="articles-grid" id="articlesGrid">
             
-            {{-- BLOK 1: 6 ARTIKEL ASLI SESUAI SCREENSHOT --}}
             {{-- Card 1 --}}
             <div class="article-card" data-title="Novel Baru “The Reborn Prince” Resmi Rilis Minggu Ini">
                 <div class="card-cover-placeholder">

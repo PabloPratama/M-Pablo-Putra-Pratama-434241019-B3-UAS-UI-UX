@@ -742,7 +742,6 @@
         object-fit: cover;
     }
 
-    /* Bagian info bar ungu di bawah gambar novel */
     .novel-info-bar {
         background-color: #833FB0;
         padding: 12px 14px;
