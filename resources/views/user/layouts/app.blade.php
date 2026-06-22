@@ -66,15 +66,15 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-4 lg:space-x-12 font-poppins text-sm font-medium">
-                    <a href="/dashboard" class="text-white hover:text-[#D17CE3] transition-colors">Beranda</a>
-                    <a href="/artikel" class="text-white hover:text-[#D17CE3] transition-colors">Artikel</a>
-                    <a href="/katalog" class="text-[#D17CE3] transition-colors">Katalog</a>
-                    <a href="/keranjang" class="text-white hover:text-[#D17CE3] transition-colors">Keranjang</a>
-                    <a href="/profil" class="text-white hover:text-[#D17CE3] transition-colors">Profil</a>
+                    <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] transition-colors">Beranda</a>
+                    <a href="{{ route('artikel') }}" class="{{ request()->routeIs('artikel') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] transition-colors">Artikel</a>
+                    <a href="{{ route('katalog') }}" class="{{ request()->routeIs('katalog') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] transition-colors">Katalog</a>
+                    <a href="{{ route('transaksi.keranjang') }}" class="{{ request()->routeIs('transaksi.keranjang') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] transition-colors">Keranjang</a>
+                    <a href="{{ route('profil') }}" class="{{ request()->routeIs('profil') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] transition-colors">Profil</a>
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="/logout" class="btn-gradient font-poppins font-medium text-white px-4 lg:px-6 py-3 rounded-[15px] flex items-center space-x-2 shadow-lg transition-transform active:scale-95">
+                    <a href="{{ route('login') }}" class="btn-gradient font-poppins font-medium text-white px-4 lg:px-6 py-2 rounded-[15px] flex items-center space-x-2 shadow-lg hover:brightness-90 transition-all duration-300">
                         <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-sm"></i>
                         <span>Keluar</span>
                     </a>
@@ -85,19 +85,18 @@
                         <i class="fa-solid fa-bars" id="menu-icon"></i>
                     </button>
                 </div>
-
             </div>
         </div>
 
         <div class="hidden md:hidden bg-brandNav/95 border-b border-brand" id="mobile-menu">
             <div class="px-6 pt-2 pb-4 space-y-3 font-poppins text-sm">
-                <a href="/dashboard" class="block text-white hover:text-[#D17CE3] py-2">Beranda</a>
-                <a href="/artikel" class="block text-white hover:text-[#D17CE3] py-2">Artikel</a>
-                <a href="/katalog" class="block text-[#D17CE3] font-semibold py-2">Katalog</a>
-                <a href="/keranjang" class="block text-white hover:text-[#D17CE3] py-2">Keranjang</a>
-                <a href="/profil" class="block text-white hover:text-[#D17CE3] py-2">Profil</a>
+                <a href="{{ route('dashboard') }}" class="block {{ request()->routeIs('dashboard') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Beranda</a>
+                <a href="{{ route('artikel') }}" class="block {{ request()->routeIs('artikel') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Artikel</a>
+                <a href="{{ route('katalog') }}" class="block {{ request()->routeIs('katalog') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Katalog</a>
+                <a href="{{ route('transaksi.keranjang') }}" class="block {{ request()->routeIs('transaksi.keranjang') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Keranjang</a>
+                <a href="{{ route('profil') }}" class="block {{ request()->routeIs('profil') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Profil</a>
                 <div class="pt-2 border-t border-brand">
-                    <a href="/logout" class="btn-gradient w-full text-center font-medium text-white py-2 rounded-[15px] flex items-center justify-center space-x-2">
+                    <a href="{{ route('login') }}" class="btn-gradient w-full text-center font-medium text-white py-2 rounded-[15px] flex items-center justify-center space-x-2 hover:brightness-90 transition-all duration-300">
                         <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
                         <span>Keluar</span>
                     </a>
@@ -146,11 +145,11 @@
                 <div class="md:col-span-3 space-y-4 md:pl-8">
                     <h4 class="font-semibold text-white tracking-wide text-base">Bantuan</h4>
                     <ul class="space-y-2.5 text-sm text-white opacity-90">
-                        <li><a href="/faq" class="hover:text-[#D17CE3] transition-colors">FAQ</a></li>
-                        <li><a href="/about" class="hover:text-[#D17CE3] transition-colors">Tentang Kami</a></li>
-                        <li><a href="/privacy" class="hover:text-[#D17CE3] transition-colors">Kebijakan Privasi</a></li>
-                        <li><a href="/terms" class="hover:text-[#D17CE3] transition-colors">Syarat & Ketentuan</a></li>
-                        <li><a href="/contact" class="hover:text-[#D17CE3] transition-colors">Kontak</a></li>
+                        <li><a href="{{ route('bantuan.faq') }}" class="hover:text-[#D17CE3] transition-colors">FAQ</a></li>
+                        <li><a href="{{ route('bantuan.hubungi_kami') }}" class="hover:text-[#D17CE3] transition-colors">Hubungi Kami</a></li>
+                        <li><a href="/privacy" class="hover:text-[#D17CE3] transition-colors">Tentang Kami</a></li>
+                        <li><a href="/terms" class="hover:text-[#D17CE3] transition-colors">Kebijakan Privasi</a></li>
+                        <li><a href="/contact" class="hover:text-[#D17CE3] transition-colors">Syarat & Ketentuan</a></li>
                     </ul>
                 </div>
 

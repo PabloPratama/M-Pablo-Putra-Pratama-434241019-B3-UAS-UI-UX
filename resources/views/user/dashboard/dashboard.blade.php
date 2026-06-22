@@ -40,7 +40,7 @@
 
         <div class="novel-grid">
             {{-- CARD NOVEL 1 --}}
-            <a href="javascript:void(0);" class="novel-card-link" title="Detail Novel">
+            <a href="{{ route('katalog.detail_bayar') }}" class="novel-card-link" title="Detail Novel">
                 <div class="novel-card">
                     <div class="novel-cover" style="background-image: url('{{ asset('images/As7.png') }}');"></div>
                     <div class="novel-body">
@@ -54,7 +54,7 @@
             </a>
 
             {{-- CARD NOVEL 2 --}}
-            <a href="javascript:void(0);" class="novel-card-link" title="Detail Novel">
+            <a href="{{ route('katalog.detail_bayar') }}" class="novel-card-link" title="Detail Novel">
                 <div class="novel-card">
                     <div class="novel-cover" style="background-image: url('{{ asset('images/As8.png') }}');"></div>
                     <div class="novel-body">
@@ -68,7 +68,7 @@
             </a>
 
             {{-- CARD NOVEL 3 --}}
-            <a href="javascript:void(0);" class="novel-card-link" title="Detail Novel">
+            <a href="{{ route('katalog.detail_bayar') }}" class="novel-card-link" title="Detail Novel">
                 <div class="novel-card">
                     <div class="novel-cover" style="background-image: url('{{ asset('images/As10.png') }}');"></div>
                     <div class="novel-body">
@@ -82,7 +82,7 @@
             </a>
 
             {{-- CARD NOVEL 4 --}}
-            <a href="javascript:void(0);" class="novel-card-link" title="Detail Novel">
+            <a href="{{ route('katalog.detail_bayar') }}" class="novel-card-link" title="Detail Novel">
                 <div class="novel-card">
                     <div class="novel-cover" style="background-image: url('{{ asset('images/As13.png') }}');"></div>
                     <div class="novel-body">
@@ -96,7 +96,7 @@
             </a>
 
             {{-- CARD NOVEL 5 --}}
-            <a href="javascript:void(0);" class="novel-card-link" title="Detail Novel">
+            <a href="{{ route('katalog.detail_bayar') }}" class="novel-card-link" title="Detail Novel">
                 <div class="novel-card">
                     <div class="novel-cover" style="background-image: url('{{ asset('images/As14.png') }}');"></div>
                     <div class="novel-body">
@@ -441,7 +441,7 @@
 
     .feature-card:hover {
         transform: translateY(-5px);
-        border-color: #8B5CF6;
+        border-color: #D17CE3;
         box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
     }
     .feature-icon {

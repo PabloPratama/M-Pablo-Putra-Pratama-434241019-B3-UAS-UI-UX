@@ -308,7 +308,7 @@
         {{-- PAGINATION CONTAINER --}}
         <div class="pagination-wrapper">
             <button type="button" class="page-box page-arrow" id="prevPage" title="Halaman Sebelumnya">
-                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-arrow-left"></i>
             </button>
             
             <button type="button" class="page-box page-num active" data-page="1">1</button>
@@ -316,7 +316,7 @@
             <button type="button" class="page-box page-num" data-page="3">3</button>
             
             <button type="button" class="page-box page-arrow" id="nextPage" title="Halaman Selanjutnya">
-                <i class="fa-solid fa-chevron-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
 

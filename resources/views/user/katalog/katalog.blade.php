@@ -170,7 +170,7 @@
 
             <div class="novel-grid" id="novelGrid">
                 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Bayangan Masa Lalu" data-genre="romantis" data-status="tamat" data-urutan="rating dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As27.png') }}" class="novel-cover" alt="">
@@ -187,7 +187,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Rumah Penunggu" data-genre="horor" data-status="ongoing" data-urutan="rating terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As7.png') }}" class="novel-cover" alt="">
@@ -204,7 +204,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Rekam Waktu Simpan Rasa" data-genre="drama" data-status="tamat" data-urutan="rating dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As8.png') }}" class="novel-cover" alt="">
@@ -221,7 +221,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Jejak Diantara Bintang" data-genre="romantis" data-status="ongoing" data-urutan="dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As10.png') }}" class="novel-cover" alt="">
@@ -238,7 +238,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Topeng Yang sempurna" data-genre="thriller" data-status="tamat" data-urutan="rating terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As13.png') }}" class="novel-cover" alt="">
@@ -255,7 +255,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Ketika Ketusuk Sarkasme Teman Sendiri" data-genre="romantis" data-status="ongoing" data-urutan="terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As14.png') }}" class="novel-cover" alt="">
@@ -272,7 +272,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Operation Teman Seumur hidup" data-genre="komedi" data-status="tamat" data-urutan="dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As24.png') }}" class="novel-cover" alt="">
@@ -289,7 +289,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Jejak Yang Hilang" data-genre="misteri" data-status="ongoing" data-urutan="terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As20.png') }}" class="novel-cover" alt="">
@@ -306,7 +306,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Project Nova" data-genre="sci-fi" data-status="tamat" data-urutan="terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As21.png') }}" class="novel-cover" alt="">
@@ -323,7 +323,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Akademi Elysian" data-genre="fantasi" data-status="ongoing" data-urutan="rating">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As23.png') }}" class="novel-cover" alt="">
@@ -340,7 +340,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Parasit" data-genre="horor" data-status="tamat" data-urutan="dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As26.png') }}" class="novel-cover" alt="">
@@ -357,7 +357,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Untukmu Diantara kelas dan Waktu" data-genre="romantis" data-status="ongoing" data-urutan="rating dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As25.png') }}" class="novel-cover" alt="">
@@ -374,7 +374,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Santet" data-genre="horor" data-status="tamat" data-urutan="rating dibaca">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As31.png') }}" class="novel-cover" alt="">
@@ -391,7 +391,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Antara Kita Yang Pernah Ada" data-genre="drama" data-status="ongoing" data-urutan="terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As29.png') }}" class="novel-cover" alt="">
@@ -408,7 +408,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Sangkala Di Tanah Nuswantara" data-genre="fantasi" data-status="tamat" data-urutan="rating">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As30.png') }}" class="novel-cover" alt="">
@@ -425,7 +425,7 @@
                     </div>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="{{ route('katalog.detail_bayar') }}">
                     <div class="novel-card" data-title="Di Antara Taring dan Tirai Darah" data-genre="thriller" data-status="ongoing" data-urutan="dibaca terbaru">
                         <div class="novel-cover-wrapper">
                             <img src="{{ asset('images/As28.png') }}" class="novel-cover" alt="">
@@ -441,6 +441,7 @@
                         </div>
                     </div>
                 </a>
+            </div>
 
                 <div id="noNovelsMessage" style="display: none; text-align: center; grid-column: 1 / -1; padding: 50px 20px; color: #a0aec0;">
                     <i class="fas fa-search-minus" style="font-size: 3rem; margin-bottom: 15px; display: block; color: #53457A;"></i>
@@ -777,6 +778,7 @@
         font-size: 12px;
         opacity: 0.9;
         white-space: nowrap;
+        line-height: 1;
     }
     .novel-rating {
         display: flex;
@@ -786,7 +788,14 @@
         font-size: 12px;
         font-weight: 600;
         white-space: nowrap;
+        line-height: 1;
     }
+
+    .novel-rating i, 
+    .novel-rating svg {
+    display: inline-flex;
+    margin-top: -2px; 
+}
 
     @media (max-width: 1024px) {
         .katalog-grid-layout {
@@ -844,6 +853,24 @@ $(document).ready(function() {
     $('.pagination-custom .page-box').not('.arrow').click(function() {
         $('.pagination-custom .page-box').removeClass('active');
         $(this).addClass('active');
+    });
+
+    $('.pagination-custom .page-box.arrow').click(function() {
+        let currentActive = $('.pagination-custom .page-box.active');
+        
+        if ($(this).find('.fa-arrow-left').length > 0 || $(this).hasClass('fa-arrow-left')) {
+            let prevPage = currentActive.prev('.page-box').not('.arrow');
+            if (prevPage.length > 0) {
+                currentActive.removeClass('active');
+                prevPage.addClass('active');
+            }
+        } else {
+            let nextPage = currentActive.next('.page-box').not('.arrow');
+            if (nextPage.length > 0) {
+                currentActive.removeClass('active');
+                nextPage.addClass('active');
+            }
+        }
     });
 
     function filterNovels() {
