@@ -191,36 +191,45 @@
             </div>
         </div>
 
-        <div class="rounded-2xl p-5 md:p-6 border custom-shadow block" style="background-color: #22123F; border-color: rgba(139, 92, 246, 0.3);">
-            <div>
-                <h2 class="text-xl md:text-2xl font-cormorant font-bold tracking-wide text-white mb-4 md:mb-6">
-                    Ringkasan Pesanan
-                </h2>
-                
-                <div class="space-y-3.5 text-xs md:text-sm">
-                    <div class="flex justify-between items-center text-gray-300">
-                        <span>Total Item</span>
-                        <span id="summaryTotalItem" class="font-semibold text-white text-sm md:text-base">1</span>
-                    </div>
+        <div class="space-y-4">
+            <div class="rounded-2xl p-5 md:p-6 border custom-shadow block" style="background-color: #22123F; border-color: rgba(139, 92, 246, 0.3);">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-cormorant font-bold tracking-wide text-white mb-4 md:mb-6">
+                        Ringkasan Pesanan
+                    </h2>
                     
-                    <div class="flex justify-between items-center text-gray-300">
-                        <span>Total Harga</span>
-                        <span class="font-bold text-white text-base md:text-lg">
-                            Rp <span id="summaryTotalPrice">50.000</span>
-                        </span>
+                    <div class="space-y-3.5 text-xs md:text-sm">
+                        <div class="flex justify-between items-center text-gray-300">
+                            <span>Total Item</span>
+                            <span id="summaryTotalItem" class="font-semibold text-white text-sm md:text-base">1</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center text-gray-300">
+                            <span>Total Harga</span>
+                            <span class="font-bold text-white text-base md:text-lg">
+                                Rp <span id="summaryTotalPrice">50.000</span>
+                            </span>
+                        </div>
                     </div>
+
+                    <div class="border-t mt-4 mb-4" style="border-color: rgba(92, 40, 126, 0.5);"></div>
                 </div>
 
-                <div class="border-t mt-4 mb-4" style="border-color: rgba(92, 40, 126, 0.5);"></div>
+                <div>
+                    <button type="button" onclick="lanjutKePembayaran()" class="btn-gradient w-full max-w-[280px] mx-auto text-white text-xs md:text-sm font-semibold py-2.5 md:py-3 px-4 rounded-xl flex items-center justify-center tracking-wide shadow-lg">
+                        <span>Lanjut ke Pembayaran</span>
+                        <svg class="icon-arrow-right w-4 h-4 text-white transform translate-y-[1px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <div>
-                <a href="{{ route('transaksi.pembayaran') }}" class="btn-gradient w-full max-w-[280px] mx-auto text-white text-xs md:text-sm font-semibold py-2.5 md:py-3 px-4 rounded-xl flex items-center justify-center tracking-wide shadow-lg">
-                    <span>Lanjut ke Pembayaran</span>
-                    <svg class="icon-arrow-right w-4 h-4 text-white transform translate-y-[1px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+            <div id="warningContainer" class="hidden flex items-center justify-center space-x-2 px-2 text-xs md:text-sm font-medium tracking-wide" style="color: #F24A4A;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #F24A4A;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Tidak ada Novel yang dipilih</span>
             </div>
         </div>
 
@@ -244,6 +253,7 @@
         const quantityValue = document.getElementById('quantityValue');
         const summaryTotalItem = document.getElementById('summaryTotalItem');
         const summaryTotalPrice = document.getElementById('summaryTotalPrice');
+        const warningContainer = document.getElementById('warningContainer');
 
         if (cartState.isItemDeleted) {
             if (novelCard) novelCard.style.setProperty('display', 'none', 'important');
@@ -259,21 +269,37 @@
         quantityValue.innerText = Math.max(0, cartState.quantity);
         itemCheckbox.checked = cartState.isItemChecked;
 
-        // Angka di "Pilih Semua" HANYA berdasarkan status checkbox Pilih Semua itu sendiri
         if (selectAllCheckbox.checked) {
             selectAllCount.innerText = cartState.totalUniqueNovels;
         } else {
             selectAllCount.innerText = "0";
         }
 
-        // Ringkasan pesanan di sebelah kanan tetap mengikuti item yang dicentang
         if (cartState.isItemChecked) {
             summaryTotalItem.innerText = cartState.quantity;
             let totalCalculated = cartState.quantity * cartState.basePricePerItem;
             summaryTotalPrice.innerText = totalCalculated.toLocaleString('id-ID');
+            
+            // Sembunyikan otomatis warning jika user mencentang kembali item
+            if (warningContainer) warningContainer.classList.add('hidden');
         } else {
             summaryTotalItem.innerText = "0";
             summaryTotalPrice.innerText = "0";
+        }
+    }
+
+    // Logika Validasi Tombol Lanjut ke Pembayaran
+    function lanjutKePembayaran() {
+        const warningContainer = document.getElementById('warningContainer');
+        
+        // Cek apakah item dihapus atau tidak dicentang (Ringkasan kosong / 0)
+        if (cartState.isItemDeleted || !cartState.isItemChecked) {
+            if (warningContainer) {
+                warningContainer.classList.remove('hidden'); // Memunculkan warning
+            }
+        } else {
+            // Jika valid (ada item terpilih), redirect ke rute pembayaran Laravel
+            window.location.href = "{{ route('transaksi.pembayaran') }}";
         }
     }
 
@@ -289,11 +315,9 @@
         }
     }
 
-    // Mengubah status centang item tanpa memengaruhi tulisan Pilih Semua global secara sepihak
     function handleItemCheckboxChange(checkbox) {
         cartState.isItemChecked = checkbox.checked;
         
-        // Opsional: Jika checkbox item dimatikan manual, hilangkan centang di Pilih Semua (tapi angka tetap mengikuti aturan click)
         const selectAllCheckbox = document.getElementById('selectAllCheckbox');
         if (!checkbox.checked) {
             selectAllCheckbox.checked = false;
@@ -302,7 +326,6 @@
         updateCartUI();
     }
 
-    // Ketika Master Checkbox di klik, ia mengontrol semua status visual & angka secara sinkron
     function toggleSelectAll(masterCheckbox) {
         cartState.isItemChecked = masterCheckbox.checked;
         updateCartUI();

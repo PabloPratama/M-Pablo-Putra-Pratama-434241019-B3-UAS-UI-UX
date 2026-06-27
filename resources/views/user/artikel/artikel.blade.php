@@ -158,7 +158,7 @@
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">Review : Jejak di Antara Bintang</h3>
-                    <p class="card-excerpt">Sebuah perjalanan luar biasa tentang tentang takdir, keberanian, dan cinta yang melintasi waktu.</p>
+                    <p class="card-excerpt">Sebuah perjalanan luar biasa tentang tentang takdir, keberarai, dan cinta yang melintasi waktu.</p>
                     <div class="card-footer">
                         <span class="article-date">20 April 2026</span>
                         <a href="{{ route('artikel.detail') }}" class="read-more-btn">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
@@ -602,13 +602,13 @@
     .page-box {
         background: #18092F;
         border: 1px solid #D17CE3;
-        border-radius: 12px; 
-        min-width: 56px; 
-        height: 56px;    
+        border-radius: 10px; 
+        min-width: 50px; 
+        height: 50px;    
         color: #ffffff;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-size: 1.15rem; 
+        font-size: 1.05rem; 
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -678,6 +678,7 @@
         }
     }
 </style>
+
 {{-- INTERACTIVE JAVASCRIPT --}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -749,13 +750,6 @@
         });
 
         prevButton.addEventListener("click", function() {
-            this.style.backgroundColor = "#D17CE3";
-            this.style.color = "#18092F";
-            setTimeout(() => {
-                this.style.backgroundColor = "#18092F";
-                this.style.color = "#ffffff";
-            }, 150);
-
             if (currentPage > 1) {
                 currentPage--;
                 renderPage();
@@ -763,13 +757,6 @@
         });
 
         nextButton.addEventListener("click", function() {
-            this.style.backgroundColor = "#D17CE3";
-            this.style.color = "#18092F";
-            setTimeout(() => {
-                this.style.backgroundColor = "#18092F";
-                this.style.color = "#ffffff";
-            }, 150);
-
             if (currentPage < 3) {
                 currentPage++;
                 renderPage();

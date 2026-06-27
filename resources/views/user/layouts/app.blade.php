@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="{{ route('login') }}" class="btn-gradient font-poppins font-medium text-white px-4 lg:px-6 py-2 rounded-[15px] flex items-center space-x-2 shadow-lg hover:brightness-90 transition-all duration-300">
+                    <a href="{{ route('login') }}" class="btn-gradient font-poppins font-medium text-white px-4 lg:px-6 py-2 rounded-[15px] flex items-center space-x-2 shadow-lg hover:opacity-90 transition-all duration-300">
                         <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-sm"></i>
                         <span>Keluar</span>
                     </a>
@@ -96,7 +96,7 @@
                 <a href="{{ route('transaksi.keranjang') }}" class="block {{ request()->routeIs('transaksi.keranjang') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Keranjang</a>
                 <a href="{{ route('profil') }}" class="block {{ request()->routeIs('profil') ? 'text-[#D17CE3] font-semibold' : 'text-white' }} hover:text-[#D17CE3] py-2">Profil</a>
                 <div class="pt-2 border-t border-brand">
-                    <a href="{{ route('login') }}" class="btn-gradient w-full text-center font-medium text-white py-2 rounded-[15px] flex items-center justify-center space-x-2 hover:brightness-90 transition-all duration-300">
+                    <a href="{{ route('login') }}" class="btn-gradient w-full text-center font-medium text-white py-2 rounded-[15px] flex items-center justify-center space-x-2 hover:opacity-90 transition-all duration-300">
                         <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
                         <span>Keluar</span>
                     </a>
